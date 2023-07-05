@@ -1,0 +1,26 @@
+<h4> Post Data
+    <button type="button" class="btn btn-primary" style="margin-left: 480px;" (click)=" addProduct()">Add Data</button>
+</h4>
+<table class="table">
+    <thead  class="table-dark">
+      <tr>
+        <th scope="col">USERID</th>
+        <th scope="col">ID</th>
+        <th scope="col">TITTLE</th>
+        <th scope="col">BODY </th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let product of result">
+        <td>{{product.userId}}</td>
+        <td>{{product.id}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.body}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="editProduct(product.id)">Edit</button></td>
+        <td>
+        <button type="button" class="btn btn-primary" (click)=" deleteData(product.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
